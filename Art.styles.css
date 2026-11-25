@@ -1,0 +1,112 @@
+*{
+    margin:0;
+    padding;
+    box-sizing:border-box;
+
+}
+body{
+ font-family:Georgia, serif
+ color: white
+ overflow-x: hidden;
+ background: black
+
+}
+background{
+ position:fixed;
+ width:100%
+ height:100%
+ top:0;
+ left:0;
+ background-image:url("starry.night.jpg");
+ background-size:cover;
+ background-position:center;
+ z-index:-2;
+ animation:zoomSlow 40s infinite alternate;
+
+}
+.background::after{
+    content''''';
+    position:absolute
+    inset:0;
+    background:rgba(0,0,0,45);
+
+}
+@keyframe zoomslow{
+from{
+    transform:scale(1);
+}
+
+to}
+ transform:scale(1.15);
+ }
+}
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+
+} 
+.hero h1{
+    font-size:5rem;
+    text-shadow: 0 0 20px gold;
+
+}
+.hero p{
+  max-width:700px;
+  margin-top:20px;
+  font-size:1.3rem;
+}
+button{
+  margin-top:30px;
+  padding:15px 30px;
+  border:none;
+  border-radius:30px;
+  background:#ffd166;
+  cursor:pointer;
+  font-size:1rem;
+}
+botton:hover{
+    transform:scale(1.1);
+}
+.story,
+.goal{
+    padding:122px 10%
+    background:rgba(0,0,30,75);
+}
+.story h2
+.goal h2
+  margin-bottom:20px;
+  font-size:3rem;
+}
+.story p,
+.goal p{
+    font-size:1.2rem;
+    line-height:1.9;
+
+}
+.star{
+    postion:fixed;
+    Background:white;
+    border-radius:51%
+    pointer-event:none;
+    animation:twinkle infinite
+}
+@keyframes twinkle{
+  50%{
+    opacity:.3;
+    transform scale:(1.9);
+
+  }
+  #quoteBox{
+    margin-box:20px;
+    color:#ffd166;
+    max-width:600px;
+    font-style:italic;
+    font-size:1.3rem;
+  }
+
+}
+
