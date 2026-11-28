@@ -1,53 +1,55 @@
 <!Doctype html>
-<html lang=en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewpoint" content="width=device-width, initial-scale=1.0>
-    <title>The Starry Night<title>
-        <link rel = "stylesheet" href=Art.styles.css">
-         <img src="starry-night.jpg" alt="Starry Night">
-        <body>
-            <div class="background"></div>
-            <section class="hero">
-                <h1> The Starry Night</h1>
-                <p>
-                    A Experience of Vincent Van Gogh's masterpiece
-                    through interactive digtial media.
-                </p>
-                <button id = "quoteBtn">
-                    Explore Van Gogn
-                </botton>
-                <div id ="quoteBox"></div>
-            </section>
-            <section class ="story"
-            <h2> Vincent Van Gogh </h2>
-            <p>
-                The year of 1889,Vincent Van Gogh
-                created the painting The Starry Night
-                during his stay in Saint-Paul-de-Mausole
-                assylum in France 
-            </p>
-            <p>
-                The swirling sky, shining stars,
-                and the bright moon has inspired
-                generation of artist around the 
-                world
-            </p>
-        </section>
-        <section class="goal"
-        <h2>Project Goal<h2>
-            <p>
-                This project remediates is a traditional 
-                painting that is merged into an immsersive
-                experience. With motion, interation and 
-                storytelling, users engage with the 
-                artwork in the ways impossible on canvas
-            </p>
-        </section>
-        <script src="Art.script.js"></script>
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color""#101522">
+    <title>The Starry Night - An Immersive art experience </title>
+        <link rel="stylesheet" href="Art.styles.css">
+</head>
+<body>
+     <div class="background" aria-hidden="true"></div>
+     <div class="star-field" aria-hidden="true"></div>
+
+  <main>   
+     <section class="hero" aria-labelledby="page-title"
+        <p class="eyebrow">Vincent Van Gogh-1889</p>
+        <h1 id="page-title"> The Starry Night</h1>
+        <p class="intro">Step into a night that never sleeps through digital media.</p>
+        <div class="hero-actions"
+        <a class="button-button-primary" href="#story">
+            Explore the painting<span aria-hidden="true">↓</span>
+        </a>
+        <button class="button-button-quiet" id="immersiveBtn" type="button">
+            Enter Immersive Mode, Enter Immersive view<span aria-hidden="true"
+        </button>
+    </div>
+    <p class="interaction-hint">Move your cursor and watch the night shift</p>
+</section>
+
+<section class="story content-panel" id="story" aria-labelledby="story-title">
+    <p class="eyebrow">A night in saint-Rémy</p>
+    <h2 id="story-title">A sky alive with movement</h2>
+    <p>
+    It was painted in 1889, while Van Gogh was in an asylum in Saint-Rémy-de-Provence, France. The painting depicts the view from the east-facing window of his asylum room at night, although it was painted from memory during the day. It has been in the permanent collection of the Museum of Modern Art in New York City since 1941, acquired through the Lillie P. Bliss Bequest. The Starry Night is regarded as among Van Gogh's finest works and is one of the most recognized monuments in the history of Western culture. <em> The Starry Night </em> Transforms the view from Van Gogh's window into a swirling, dreaming vision of the night sky, framed by the quiet village below and the dark, rolling hills above,
+
+    </p>
+    <p>
+        The bright crescent moon and the stars are depicted with halos of light, and the sky is alive with whirling clouds, stars ablaze with their own light, and a bright crescent moon. The painting has been interpreted as a depiction of Van Gogh's turbulent quest for serve and serenity, and as a reflection of his interest into the purpose of capturing the spiritual in nature's beauty. The painting is often seen as a reflection of Van Gogh's inner turmoil and his struggle with mental struggles, but yet created beauty out of that. The Starry Night is a great sense of his creativity
+        </p>
+        <details class="art-details">
+            <summary>Artistic Techniques</summary>
+            <p>Van Gogh used bold, expressive brushstrokes to create the dynamic movement in the sky. The swirling patterns and vibrant colors convey a sense of energy and emotion.</p>
+            <em>The Starry Night</em> the painting shows Van Gogh's unigue creactive ability, his work is displayed in the collection muesem of modern art New York
+        </P>
+    </details>
+    </section>
+
+
+    </main>
+
+    <footer class="footer">An Invitation to Experience the Starry Night</footer>
+    <script src="Art.script.js"></script>
     </body>
     </html>
-
-
-
 
