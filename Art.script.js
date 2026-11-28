@@ -1,40 +1,34 @@
-for(let i=0;i<150;i++){
-    const star = document.createElement("div");
-    star.classList.add("star");
-    const size = Math.random()*4+1;
-    star.syle.width=size+"px";
-    star.style.height=size+"px";
-    star.style.left=Math.random()*100+"vw";
-    star.style.top=Math.random()*100+"vh";
-     star.style.animationDuration=
-     (Math.random()*4+2)+"s";
-     document.body.appendChild(star);
-}
-const quotes=[
-    "For my part I know with any certainty, but the sight of the stars make me dream",
-    "I dream my painting and then I paint my dream.",
-    "If I hear a voice within you 'you cannot paint,'then by all means paint, and that voice 
-    will be silenced"
-    "I want something serious, something fresh-something with in it!"
-];
-const button =
-document.getElementByld("quoteBtn");
-button.addEventListener("click,"()=>{
-    const random =
-    quotes[Math.floor.(Math.random()*quotes.length)];
-    document.getElementByld("quote box")
-    .innerText = random;
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const starField = document.querySelector(".star-field");
+const immersiveButton = document.querySelector("#immersiveBtn");
 
-})
-document.addEventListener("mousemove,(e)=>{
-    const stars=
-    document.querySelectorAll("star");
-    stars.forEach((star,index)=>{
-        if(index%20===0){
-            const x=(e.clientX-window.inner.Width/2)/400
-            const y=(e.clientY-window.inner.Height/2)/400
-            star.style.transform=
-            'translate(${x}px,${y}px)';
-        }
+if (starField && !reduceMotion.matches) {
+    for(let index = 0; index < 90; index += 1) {
+    const star = document.createElement("span");
+    const size = Math.random() * 2.5 + 1;
+
+    star.className = "star";
+    star.style.width = `${size}px`;
+    star.style.height = `${size}px`;
+    star.style.left = `${Math.random() * 100}%`;
+    star.style.top = `${Math.random() * 100}%`;
+    star.style.animationDelay = `${Math.random() * 4}s`;
+    starField.appendChild(star);
+}
+document.addEventListener("pointermove",(event) => {
+    if (event.pointerType=== "touch") return;
+    const x =(event.clientX / window.innerWidth - 0.5) * -12;
+    const y =(event.clientY / window.innerHeight - 0.5) * -12;
+    document.documentElement.style.setProperty("--pointer-x", `${x}px`);
+    document.documentElement.style.setProperty("--pointer-y", `${y}px`);
+  });
+}
+if (immersiveButton) {
+    immersiveButton.addEventListener("click",() => {
+      const isImmersive = document.body.classList.toggle("is-immersive");
+      immersiveButton.textContent = isImmersive
+           ? "Exit immersive view"
+           : "Enter immersive view";
+
     });
-});
+}
